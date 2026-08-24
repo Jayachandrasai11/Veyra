@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <defs>
+    <linearGradient id="vGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2153E6"/>
+      <stop offset="100%" stop-color="#6DAAF5"/>
+    </linearGradient>
+  </defs>
+  <!-- Blue V mark centered on white -->
+  <rect width="48" height="48" rx="10" fill="white"/>
+  <path
+    d="M7 8 L24 38 L41 8"
+    fill="none"
+    stroke="url(#vGrad)"
+    stroke-width="8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>

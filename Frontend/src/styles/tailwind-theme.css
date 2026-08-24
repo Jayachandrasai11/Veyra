@@ -1,0 +1,99 @@
+/*
+ * FERMOR — TAILWIND v4 THEME EXTENSION
+ * ─────────────────────────────────────────────
+ * Bridges Fermor CSS tokens into Tailwind utilities.
+ * Uses @theme inline so Tailwind classes reference
+ * the CSS variables directly — themes switch via .dark
+ * without any JS.
+ *
+ * Import order in index.css:
+ *   1. @import "tailwindcss"
+ *   2. @import "./styles/tokens.css"
+ *   3. @import "./styles/tailwind-theme.css"  ← this file
+ * ─────────────────────────────────────────────
+ */
+
+@theme inline {
+  /* ── Font ───────────────────────────── */
+  /* Deliberately stays 'Inter': the landing page root uses the
+     `font-sans` utility and its typography must not change.
+     The main application inherits Plus Jakarta Sans from
+     --font-family-base / html (see tokens.css §03). */
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  /* ── Colors ─────────────────────────── */
+  /* Background / Surface */
+  --color-fermor-bg:       var(--color-background);
+  --color-fermor-surface-1: var(--color-surface-1);
+  --color-fermor-surface-2: var(--color-surface-2);
+  --color-fermor-surface-3: var(--color-surface-3);
+
+  /* Theme surfaces — for premium financial cards */
+  --color-fermor-financial: var(--color-financial);
+  --color-fermor-financial-soft: var(--color-financial-soft);
+
+  /* Text */
+  --color-fermor-text:           var(--color-text-primary);
+  --color-fermor-text-secondary: var(--color-text-secondary);
+  --color-fermor-text-tertiary:  var(--color-text-tertiary);
+  --color-fermor-text-disabled:  var(--color-text-disabled);
+
+  /* Brand */
+  --color-fermor-primary:       var(--color-primary);
+  --color-fermor-primary-hover: var(--color-primary-hover);
+  --color-fermor-primary-soft:  var(--color-primary-soft);
+  --color-fermor-accent:        var(--color-accent);
+  --color-fermor-accent-soft:   var(--color-accent-soft);
+
+  /* Border */
+  --color-fermor-border: var(--color-border);
+
+  /* Semantic */
+  --color-fermor-success:      var(--color-success);
+  --color-fermor-success-soft: var(--color-success-soft);
+  --color-fermor-warning:      var(--color-warning);
+  --color-fermor-warning-soft: var(--color-warning-soft);
+  --color-fermor-error:        var(--color-error);
+  --color-fermor-error-soft:   var(--color-error-soft);
+  --color-fermor-info:         var(--color-info);
+  --color-fermor-info-soft:    var(--color-info-soft);
+
+  /* ── Border Radius ───────────────────── */
+  /* NOTE: Do NOT map --spacing-* tokens here. In Tailwind v4, spacing tokens
+     named sm/md/lg/xl/2xl… shadow the built-in container scale and break
+     size utilities like max-w-2xl (it would resolve to 40px instead of 42rem).
+     Use var(--spacing-*) in arbitrary values instead. */
+
+
+  --radius-xs:   var(--radius-xs);
+  --radius-sm:   var(--radius-sm);
+  --radius-md:   var(--radius-md);
+  --radius-lg:   var(--radius-lg);
+  --radius-xl:   var(--radius-xl);
+  --radius-full: var(--radius-full);
+
+  /* ── Shadows ─────────────────────────── */
+  --shadow-none:    var(--shadow-none);
+  --shadow-card:    var(--shadow-card);
+  --shadow-raised:  var(--shadow-raised);
+  --shadow-overlay: var(--shadow-overlay);
+
+  /* ── Z-index ─────────────────────────── */
+  --z-index-base:     var(--z-base);
+  --z-index-dropdown: var(--z-dropdown);
+  --z-index-sticky:   var(--z-sticky);
+  --z-index-overlay:  var(--z-overlay);
+  --z-index-modal:    var(--z-modal);
+  --z-index-toast:    var(--z-toast);
+
+  /* ── Breakpoints (Fermor) ────────────── */
+  /* mobile-first: tablet ≥768, desktop ≥1200 */
+  --breakpoint-tablet:  768px;
+  --breakpoint-desktop: 1200px;
+
+  /* ── Animation durations ─────────────── */
+  --animate-fast:     var(--duration-fast);
+  --animate-normal:   var(--duration-normal);
+  --animate-slow:     var(--duration-slow);
+  --animate-emphasis: var(--duration-emphasis);
+}

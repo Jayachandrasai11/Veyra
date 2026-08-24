@@ -1,0 +1,477 @@
+/*
+ * FERMOR DESIGN TOKENS
+ * ─────────────────────────────────────────────
+ * Source of truth: design_system/Foundations/
+ * Do NOT add arbitrary values. Every token maps
+ * directly to an approved design-system spec.
+ * ─────────────────────────────────────────────
+ */
+
+/* ═══════════════════════════════════════════
+   01. COLORS — Light Mode
+   Updated per FERMO COLOR SYSTEM
+   ═══════════════════════════════════════════ */
+:root {
+  /* Base surfaces */
+  --color-background:   #FAFBFC;
+  --color-surface-1:    #FFFFFF;
+  --color-surface-2:    #F8FAFC;
+  --color-surface-3:    #F0F4F8;
+
+  /* Themed card surfaces — Foundations/colour.md + Components/card.md
+     70% neutral / 20% tint / 10% navy or semantic. */
+  --color-surface-navy:   #0B1F3A;  /* Financial Health anchor (dark) */
+  --color-surface-navy-text:        #EEF3F9;
+  --color-surface-navy-text-muted:  #A9C0D8;
+  --color-surface-blue:   #EEF5FD;  /* insights / investments */
+  --color-surface-sky:    #F2F7FC;  /* page canvas / soft featured */
+  --color-surface-green:  #EFF8F4;  /* savings / goals progress */
+  --color-surface-amber:  #FCF7ED;  /* warning / attention */
+  --color-surface-warm:   #FCF7ED;  /* alias of amber */
+   --color-surface-lavender:#F5F3FA; /* Ask Fermor / AI thought */
+  --color-surface-slate:  #F3F6F9;  /* secondary / settings */
+  --color-surface-brand:  #E9EFFF;  /* connect CTA */
+
+  --page-canvas-end: var(--color-surface-sky);
+  --empty-area-gradient: linear-gradient(180deg, var(--color-background) 0%, var(--page-canvas-end) 100%);
+
+  /* Theme surfaces */
+  --color-financial:    #0B1F3A;
+  --color-financial-soft: #1E3A5F;
+
+  /* Text */
+  --color-text-primary:   #0B1F3A;
+  --color-text-secondary: #52647A;
+  --color-text-tertiary:  #7A8798;
+  --color-text-disabled:  #A7B1BD;
+
+/* Brand - Primary Action */
+/* Cobalt — premium royal blue (approved palette update) */
+--color-primary:        #2153E6;
+--color-primary-hover:  #1A42C2;
+--color-primary-soft:   #E9EFFF;
+
+--color-accent:         #2153E6;
+--color-accent-soft:    #E9EFFF;
+
+/* Cobalt glass surface — single-hue glassmorphism */
+--app-glass-primary-bg:     linear-gradient(135deg, rgba(33, 83, 230, 0.10) 0%, rgba(33, 83, 230, 0.04) 100%);
+--app-glass-primary-border: rgba(33, 83, 230, 0.22);
+--app-glass-primary-mild:   rgba(33, 83, 230, 0.45);
+
+  /* Border */
+  --color-border:         #D9E1EA;
+
+  /* Semantic */
+  --color-success:        #16835B;
+  --color-success-soft:   #E8F5EC;
+
+  --color-warning:        #B7791F;
+  --color-warning-soft:   #FFF7E6;
+
+  --color-error:          #C43D3D;
+  --color-error-soft:     #FDECEC;
+
+  --color-info:           #2153E6;
+  --color-info-soft:      #E9EFFF;
+}
+
+/* ═══════════════════════════════════════════
+   01. COLORS — Dark Mode
+   Source: Foundations/colour.md
+   ═══════════════════════════════════════════ */
+.dark {
+  /* Base surfaces */
+  --color-background:   #010509;
+  --color-surface-1:    #07101a;
+  --color-surface-2:    #0b1622;
+  --color-surface-3:    #102030;
+
+  --color-surface-navy:   #0B1F3A;
+  --color-surface-navy-text:        #EEF3F9;
+  --color-surface-navy-text-muted:  #A9C0D8;
+  --color-surface-blue:   #0B1B2B;
+  --color-surface-sky:    #0A1622;
+  --color-surface-green:  #0D211B;
+  --color-surface-amber:  #211D15;
+  --color-surface-warm:   #211D15;
+  --color-surface-lavender:#16141F;
+  --color-surface-slate:  #0D1822;
+  --color-surface-brand:  #0F2540;
+
+  --page-canvas-end: var(--color-surface-sky);
+  --empty-area-gradient: linear-gradient(180deg, var(--color-background) 0%, var(--page-canvas-end) 100%);
+
+  /* Theme surfaces */
+  --color-financial:    #0B1F3A;  /* Deep Navy - preserved for thematic contrast */
+  --color-financial-soft: #1E3A5F; /* Slightly lifted for gradient effect */
+
+  /* Text */
+  --color-text-primary:   #f7faff;
+  --color-text-secondary: #b7c2d0;
+  --color-text-tertiary:  #7f8c9c;
+  --color-text-disabled:  #566474;
+
+/* Brand - Primary Action */
+--color-primary:        #2153E6;
+--color-primary-hover:  #3D68F0;
+--color-primary-soft:   #12325a;
+
+  --color-accent:         #2153E6;
+  --color-accent-soft:    #082d4d;
+
+  /* Cobalt glass surface — single-hue glassmorphism */
+  --app-glass-primary-bg:     linear-gradient(135deg, rgba(33, 83, 230, 0.20) 0%, rgba(33, 83, 230, 0.08) 100%);
+  --app-glass-primary-border: rgba(120, 156, 242, 0.35);
+  --app-glass-primary-mild:   rgba(120, 156, 242, 0.55);
+  --app-glass-hover:          rgba(255, 255, 255, 0.10);
+
+  /* Border */
+  --color-border:         #1c2b3a;
+
+  /* Semantic */
+  --color-success:        #16835B;
+  --color-success-soft:   #103522;
+
+  --color-warning:        #B7791F;
+  --color-warning-soft:   #3a2b12;
+
+  --color-error:          #C43D3D;
+  --color-error-soft:     #3a1717;
+
+  --color-info:           #4D7CF3;
+  --color-info-soft:      #082d4d;
+}
+
+/* ═══════════════════════════════════════════
+   02. SPACING
+   Source: Foundations/spacing.md
+   Base unit: 8px
+   ═══════════════════════════════════════════ */
+:root {
+  --spacing-2xs:  4px;   /* micro adjustments */
+  --spacing-xs:   8px;   /* tight relationships */
+  --spacing-sm:   12px;  /* small component spacing */
+  --spacing-md:   16px;  /* default UI spacing */
+  --spacing-lg:   24px;  /* card / component spacing */
+  --spacing-xl:   32px;  /* content group spacing */
+  --spacing-2xl:  40px;  /* section spacing */
+  --spacing-3xl:  48px;  /* major section separation */
+  --spacing-4xl:  64px;  /* large page separation */
+  --spacing-5xl:  80px;  /* hero / large empty states */
+}
+
+/* ═══════════════════════════════════════════
+   03. TYPOGRAPHY
+   Source: Foundations/Typography.md
+   Application typeface: Plus Jakarta Sans
+   (typography-system update; Inter remains the
+   landing/marketing face via --font-sans)
+   ═══════════════════════════════════════════ */
+:root {
+  --font-family-base: 'Plus Jakarta Sans Variable', 'Plus Jakarta Sans', system-ui, sans-serif;
+
+  /* Display */
+  --typography-display-size:    48px;
+  --typography-display-line:    56px;
+  --typography-display-weight:  700;
+  --typography-display-tracking: -1.2px;
+
+  /* H1 */
+  --typography-h1-size:    32px;
+  --typography-h1-line:    40px;
+  --typography-h1-weight:  700;
+  --typography-h1-tracking: -0.6px;
+
+  /* H2 */
+  --typography-h2-size:    24px;
+  --typography-h2-line:    32px;
+  --typography-h2-weight:  600;
+  --typography-h2-tracking: -0.3px;
+
+  /* H3 */
+  --typography-h3-size:    18px;
+  --typography-h3-line:    24px;
+  --typography-h3-weight:  600;
+  --typography-h3-tracking: -0.15px;
+
+  /* Body Large */
+  --typography-body-lg-size:    18px;
+  --typography-body-lg-line:    28px;
+  --typography-body-lg-weight:  400;
+  --typography-body-lg-tracking: 0;
+
+  /* Body */
+  --typography-body-size:    16px;
+  --typography-body-line:    24px;
+  --typography-body-weight:  400;
+  --typography-body-tracking: 0;
+
+  /* Body Small */
+  --typography-body-sm-size:    14px;
+  --typography-body-sm-line:    20px;
+  --typography-body-sm-weight:  400;
+  --typography-body-sm-tracking: 0;
+
+  /* Label */
+  --typography-label-size:    14px;
+  --typography-label-line:    20px;
+  --typography-label-weight:  500;
+  --typography-label-tracking: 0;
+
+  /* Caption */
+  --typography-caption-size:    12px;
+  --typography-caption-line:    16px;
+  --typography-caption-weight:  400;
+  --typography-caption-tracking: 0.1px;
+
+  /* Financial Number */
+  --typography-financial-size:    24px;
+  --typography-financial-line:    32px;
+  --typography-financial-weight:  600;
+  --typography-financial-variant: tabular-nums;
+
+  /* Hero Financial Number */
+  --typography-financial-hero-size:    40px;
+  --typography-financial-hero-line:    48px;
+  --typography-financial-hero-weight:  700;
+  --typography-financial-hero-tracking: -1px;
+  --typography-financial-hero-variant:  tabular-nums;
+}
+
+/* ═══════════════════════════════════════════
+   03b. TYPOGRAPHY — APPLICATION PRODUCT SCALE
+   Main-app-only roles (never consumed by the
+   landing page, which uses §03 values inline).
+   Sources: task product-scale targets +
+   Components/metric.md (32px default value,
+   28px compact value, tabular numerals).
+   ═══════════════════════════════════════════ */
+:root {
+  /* Micro label / eyebrow — 11–12px, weight 500 */
+  --app-label-size:      12px;
+  --app-label-line:      16px;
+  --app-label-weight:    500;
+  --app-label-tracking:  0.2px;
+
+  /* Primary financial value — metric.md default 32px, target weight 700 */
+  --app-financial-primary-size:     32px;
+  --app-financial-primary-line:     40px;
+  --app-financial-primary-weight:   700;
+  --app-financial-primary-tracking: -0.8px;
+  --app-financial-primary-variant:  tabular-nums;
+
+  /* Compact financial value — metric.md compact 28px
+     (Secondary financial values use §03 --typography-financial-*:
+      24px / 32px / weight 600 / tabular-nums) */
+  --app-financial-compact-size:     28px;
+  --app-financial-compact-line:     36px;
+  --app-financial-compact-weight:   700;
+  --app-financial-compact-tracking: -0.5px;
+  --app-financial-compact-variant:  tabular-nums;
+}
+
+/* ═══════════════════════════════════════════
+   04. BORDER RADIUS
+   Source: Foundations/radius.md
+   ═══════════════════════════════════════════ */
+:root {
+  --radius-xs:   4px;   /* chips, tight badges */
+  --radius-sm:   6px;   /* inputs, controls */
+  --radius-md:   8px;   /* buttons, inputs */
+  --radius-lg:   12px;  /* cards */
+  --radius-xl:   16px;  /* modals, large panels */
+  --radius-full: 9999px; /* pills, avatars, badges */
+
+  /* Semantic assignments (radius.md) */
+  --radius-card:   var(--radius-lg);
+  --radius-button: var(--radius-md);
+  --radius-input:  var(--radius-md);
+  --radius-badge:  var(--radius-full);
+  --radius-avatar: var(--radius-full);
+
+  /* Focus ring */
+  --focus-ring-width:  2px;
+  --focus-ring-color:  var(--color-primary);
+  --focus-ring-offset: 2px;
+}
+
+/* ═══════════════════════════════════════════
+   05. ELEVATION / SHADOWS
+   Source: Foundations/Elevation.md
+   ═══════════════════════════════════════════ */
+:root {
+  /* Level 0 — Flat (page background, sections, tables) */
+  --shadow-none: none;
+
+  /* Level 1 — Card (dashboard cards, goal cards, insight cards) */
+  --shadow-card: 0 1px 3px rgba(15, 35, 55, 0.06);
+
+  /* Level 2 — Raised (hover, dropdowns, popovers) */
+  --shadow-raised: 0 4px 12px rgba(15, 35, 55, 0.10);
+
+  /* Level 3 — Overlay (modals, dialogs) */
+  --shadow-overlay: 0 12px 32px rgba(15, 35, 55, 0.16);
+}
+
+/* ═══════════════════════════════════════════
+   06. MOTION
+   Source: Foundations/motion.md
+   ═══════════════════════════════════════════ */
+:root {
+  /* Duration */
+  --duration-fast:      120ms;
+  --duration-normal:    200ms;
+  --duration-slow:      360ms;
+  --duration-emphasis:  500ms;
+
+  /* Easing */
+  --ease-fast:     ease-out;
+  --ease-normal:   ease-in-out;
+  --ease-slow:     cubic-bezier(0.34, 1.56, 0.64, 1);   /* spring approx */
+  --ease-emphasis: cubic-bezier(0.16, 1, 0.3, 1);       /* gentle spring */
+
+  /* Per-component — for CSS transitions */
+  --transition-card-hover:    background var(--duration-fast) var(--ease-fast),
+                             box-shadow var(--duration-fast) var(--ease-fast),
+                             border-color var(--duration-fast) var(--ease-fast);
+  --transition-color:         color var(--duration-fast) var(--ease-fast),
+                             background-color var(--duration-fast) var(--ease-fast),
+                             border-color var(--duration-fast) var(--ease-fast),
+                             opacity var(--duration-fast) var(--ease-fast);
+  --transition-sidebar:       width var(--duration-normal) var(--ease-normal),
+                             transform var(--duration-normal) var(--ease-normal);
+  --transition-modal:         opacity var(--duration-normal) var(--ease-fast),
+                             transform var(--duration-normal) var(--ease-fast);
+}
+
+/* ═══════════════════════════════════════════
+   07. ICONS
+   Source: Foundations/icons.md
+   ═══════════════════════════════════════════ */
+:root {
+  --icon-xs:      16px;  /* metadata, compact actions */
+  --icon-sm:      18px;  /* standard UI, navigation */
+  --icon-md:      20px;  /* primary UI controls */
+  --icon-lg:      24px;  /* prominent, feature icons */
+
+  --icon-stroke:        2;     /* default stroke-width */
+  --icon-stroke-light:  1.5;   /* secondary stroke */
+  --icon-gap:           var(--spacing-xs); /* icon + text gap 8px */
+
+  /* Icon button */
+  --icon-button-size:         40px;
+  --icon-button-touch-target: 44px;
+}
+
+/* ═══════════════════════════════════════════
+   08. Z-INDEX
+   Source: Deisgntokens/master.md §11
+   ═══════════════════════════════════════════ */
+:root {
+  --z-base:     0;
+  --z-raised:   1;
+  --z-dropdown: 20;
+  --z-sticky:   30;
+  --z-overlay:  40;
+  --z-modal:    50;
+  --z-toast:    60;
+}
+
+/* ═══════════════════════════════════════════
+   09. GRID + CONTAINER
+   Source: Foundations/Grid.md
+   ═══════════════════════════════════════════ */
+:root {
+  /* Container */
+  --container-max:          1440px;
+  --container-padding-desktop: var(--spacing-xl);   /* 32px */
+  --container-padding-tablet:  var(--spacing-lg);   /* 24px */
+  --container-padding-mobile:  var(--spacing-md);   /* 16px */
+
+  /* Grid columns */
+  --grid-cols-desktop: 12;
+  --grid-cols-tablet:  8;
+  --grid-cols-mobile:  4;
+
+  /* Gutters */
+  --grid-gap-desktop: var(--spacing-lg);   /* 24px */
+  --grid-gap-tablet:  20px;                /* 20px — not on spacing scale, spec exact */
+  --grid-gap-mobile:  var(--spacing-md);   /* 16px */
+
+  /* Row gap */
+  --grid-row-gap:         var(--spacing-lg); /* 24px default */
+  --grid-row-gap-major:   var(--spacing-2xl); /* 40px major sections */
+
+  /* Section gap */
+  --section-gap-desktop:  var(--spacing-xl);  /* 32px */
+  --section-gap-tablet:   var(--spacing-lg);  /* 24px */
+  --section-gap-mobile:   var(--spacing-lg);  /* 24px */
+}
+
+/* ═══════════════════════════════════════════
+   10. APP SHELL DIMENSIONS
+   Source: Foundations/Appshell.md
+   ═══════════════════════════════════════════ */
+:root {
+  --sidebar-width:           248px;
+  --sidebar-width-collapsed: 72px;
+
+  --header-height-desktop: 64px;
+  --header-height-tablet:  64px;
+  --header-height-mobile:  56px;
+
+  --header-padding-desktop: var(--spacing-lg);  /* 24px */
+  --header-padding-mobile:  var(--spacing-md);  /* 16px */
+
+  --nav-item-height:     40px;
+  --nav-item-padding-x:  var(--spacing-sm);     /* 12px */
+  --nav-icon-size:       var(--icon-sm);         /* 18px */
+  --nav-icon-gap:        10px;                   /* spec exact */
+  --nav-item-gap:        var(--spacing-2xs);     /* 4px */
+  --nav-group-gap:       var(--spacing-lg);      /* 24px */
+}
+
+/* ═══════════════════════════════════════════
+   11. BORDERS
+   Source: Foundations/Elevation.md + colour.md
+   ═══════════════════════════════════════════ */
+:root {
+  --border-width:        1px;
+  --border-style:        solid;
+  --border-default:      1px solid var(--color-border);
+}
+
+/* ═══════════════════════════════════════════
+   12. REDUCED MOTION
+   Source: Foundations/motion.md §REDUCED MOTION
+   ═══════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast:     0ms;
+    --duration-normal:   0ms;
+    --duration-slow:     0ms;
+    --duration-emphasis: 0ms;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   13. PAGE THEMES + NAVY CARD TEXT
+   Source: Foundations/colour.md, Components/card.md
+   ═══════════════════════════════════════════ */
+[data-page-theme="home"]      { --page-canvas-end: var(--color-surface-sky); }
+[data-page-theme="insights"]  { --page-canvas-end: var(--color-surface-blue); }
+[data-page-theme="goals"]     { --page-canvas-end: var(--color-surface-green); }
+[data-page-theme="explore"]   { --page-canvas-end: var(--color-surface-slate); }
+[data-page-theme="connect"]   { --page-canvas-end: var(--color-surface-brand); }
+[data-page-theme="assistant"] { --page-canvas-end: var(--color-surface-lavender); }
+[data-page-theme="settings"]  { --page-canvas-end: var(--color-surface-slate); }
+[data-page-theme="default"]   { --page-canvas-end: var(--color-surface-sky); }
+
+[data-surface="navy"] {
+  --color-text-primary: var(--color-surface-navy-text);
+  --color-text-secondary: var(--color-surface-navy-text-muted);
+  --color-text-tertiary: var(--color-surface-navy-text-muted);
+  --color-primary: var(--color-accent);
+  --color-border: var(--color-financial-soft);
+}

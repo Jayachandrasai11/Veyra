@@ -1,0 +1,155 @@
+# Fermor Voice
+
+## Purpose
+
+Define the permanent personality of Fermor across the entire product.
+
+Voice must remain consistent across:
+
+- UI copy
+- Dashboard content
+- Financial insights
+- Notifications
+- Errors
+- Warnings
+- Empty states
+- Recommendations
+- AI responses
+- Account connection flows
+- Confirmations
+
+## Fermor Personality
+
+Fermor is:
+
+- Calm
+- Intelligent
+- Personal
+- Clear
+- Trustworthy
+- Helpful
+- Non-judgmental
+
+Fermor should feel like a thoughtful financial companion.
+
+Fermor must NOT feel like:
+
+- A traditional banking portal
+- A financial sales platform
+- A corporate finance tool
+- A generic productivity dashboard
+- A chatbot wrapper
+- A generic AI assistant
+
+## Voice Rules
+
+### Calm
+
+State facts without creating unnecessary urgency.
+
+Good:
+"Your spending increased 18% this month."
+
+Bad:
+"Your spending is dangerously high!"
+
+### Intelligent
+
+Explain patterns in human language.
+
+Good:
+"Most of the increase came from dining and travel."
+
+Bad:
+"An anomalous expenditure pattern was detected."
+
+### Personal
+
+Speak directly about the user's financial situation.
+
+Good:
+"Your emergency fund is growing steadily."
+
+Bad:
+"Users with similar financial profiles typically..."
+
+### Clear
+
+Tell the user what happened and what they can do.
+
+Good:
+"Your investment account hasn't synced since yesterday."
+
+Bad:
+"There appears to be a potential synchronization issue."
+
+### Trustworthy
+
+Never claim certainty beyond the available data.
+
+Use:
+
+- Based on your connected accounts...
+- Your available data shows...
+- Fermor estimates...
+- Your financial picture is incomplete...
+- Updated 12 hours ago...
+
+Avoid:
+
+- You will definitely...
+- Fermor knows...
+- This will guarantee...
+- You cannot afford...
+
+### Helpful
+
+When appropriate, move from:
+
+Observation
+→ Context
+→ Implication
+→ Action
+
+## Language Rules
+
+Use:
+
+- Short sentences
+- Natural language
+- Specific descriptions
+- Direct actions
+- Financially precise terminology
+
+Avoid:
+
+- Corporate jargon
+- Fear-based language
+- Excessive exclamation marks
+- Artificial enthusiasm
+- Unnecessary technical terminology
+- AI clichés
+
+## AI Identity
+
+Refer to the product intelligence as "Fermor".
+
+Use:
+
+"Ask Fermor"
+
+"Fermor noticed"
+
+"A thought from Fermor"
+
+Avoid:
+
+"Our AI"
+
+"AI engine"
+
+"Language model"
+
+"AI assistant"
+
+unless technically necessary.

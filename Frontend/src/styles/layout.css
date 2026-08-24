@@ -1,0 +1,127 @@
+/*
+ * FERMOR ELEVATION UTILITIES
+ * Source: Foundations/Elevation.md
+ */
+
+/* Level 0 */
+.elevation-0 {
+  box-shadow: var(--shadow-none);
+  border: var(--border-default);
+}
+
+/* Level 1 — Cards */
+.elevation-card {
+  box-shadow: var(--shadow-card);
+  border: var(--border-default);
+}
+
+/* Level 2 — Hover / Dropdowns */
+.elevation-raised {
+  box-shadow: var(--shadow-raised);
+  border: var(--border-default);
+}
+
+/* Level 3 — Modals / Overlays */
+.elevation-overlay {
+  box-shadow: var(--shadow-overlay);
+  border: var(--border-default);
+}
+
+/*
+ * FERMOR GRID UTILITIES
+ * Source: Foundations/Grid.md
+ */
+
+/* Page container */
+.fermor-container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-mobile);
+}
+
+@media (min-width: 768px) {
+  .fermor-container {
+    padding-inline: var(--container-padding-tablet);
+  }
+}
+
+@media (min-width: 1200px) {
+  .fermor-container {
+    padding-inline: var(--container-padding-desktop);
+  }
+}
+
+/* 12-col grid */
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--grid-gap-mobile);
+}
+
+@media (min-width: 768px) {
+  .grid-12 {
+    grid-template-columns: repeat(8, 1fr);
+    gap: var(--grid-gap-tablet);
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid-12 {
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gap-desktop);
+  }
+}
+
+/* Dashboard card grids */
+.grid-snapshot {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--grid-gap-mobile);
+}
+
+@media (min-width: 768px) {
+  .grid-snapshot {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--grid-gap-tablet);
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid-snapshot {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--grid-gap-desktop);
+  }
+}
+
+.grid-insights {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--grid-gap-mobile);
+}
+
+@media (min-width: 768px) {
+  .grid-insights {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--grid-gap-tablet);
+  }
+}
+
+/* Section spacing */
+.section-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap-mobile);
+}
+
+@media (min-width: 768px) {
+  .section-stack {
+    gap: var(--section-gap-tablet);
+  }
+}
+
+@media (min-width: 1200px) {
+  .section-stack {
+    gap: var(--section-gap-desktop);
+  }
+}

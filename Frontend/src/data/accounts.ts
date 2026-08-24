@@ -1,0 +1,48 @@
+import type { Account } from "@/types/account";
+
+export const accounts: Account[] = [
+  {
+    id: "acc-1",
+    name: "Main Checking",
+    institution: "Chase",
+    type: "checking",
+    balance: 12450.8,
+    currency: "USD",
+    status: "active",
+    lastSynced: "2026-08-22T10:30:00Z",
+    color: "#2153E6",
+  },
+  {
+    id: "acc-2",
+    name: "High-Yield Savings",
+    institution: "Marcus",
+    type: "savings",
+    balance: 48200.0,
+    currency: "USD",
+    status: "active",
+    lastSynced: "2026-08-22T10:30:00Z",
+    color: "#16803c",
+  },
+  {
+    id: "acc-3",
+    name: "Investment Portfolio",
+    institution: "Fidelity",
+    type: "investment",
+    balance: 125800.45,
+    currency: "USD",
+    status: "active",
+    lastSynced: "2026-08-22T09:00:00Z",
+    color: "#b7791f",
+  },
+  {
+    id: "acc-4",
+    name: "Credit Card",
+    institution: "Amex",
+    type: "credit",
+    balance: -2340.6,
+    currency: "USD",
+    status: "active",
+    lastSynced: "2026-08-22T10:30:00Z",
+    color: "#c62828",
+  },
+];

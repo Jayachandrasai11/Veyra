@@ -1,0 +1,197 @@
+@import "tailwindcss";
+@import "./tokens.css";
+@import "./tailwind-theme.css";
+@import "./typography.css";
+@import "./layout.css";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/plus-jakarta-sans";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    border-color: var(--color-border);
+  }
+
+  html {
+    font-family: var(--font-family-base);
+    font-size: var(--typography-body-size);
+    line-height: var(--typography-body-line);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    color-scheme: light dark;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+  }
+
+  h1 {
+    font-size: var(--typography-h1-size);
+    line-height: var(--typography-h1-line);
+    font-weight: var(--typography-h1-weight);
+    letter-spacing: var(--typography-h1-tracking);
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+  h2 {
+    font-size: var(--typography-h2-size);
+    line-height: var(--typography-h2-line);
+    font-weight: var(--typography-h2-weight);
+    letter-spacing: var(--typography-h2-tracking);
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+  h3 {
+    font-size: var(--typography-h3-size);
+    line-height: var(--typography-h3-line);
+    font-weight: var(--typography-h3-weight);
+    letter-spacing: var(--typography-h3-tracking);
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  :focus-visible {
+    outline: var(--focus-ring-width) solid var(--focus-ring-color);
+    outline-offset: var(--focus-ring-offset);
+    border-radius: var(--radius-sm);
+  }
+
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+/* ─── System reduced motion ───────────────────────
+   Extends the token-based reduction above: also
+   neutralizes CSS keyframe animations (spinners,
+   pulse) that are not driven by the duration tokens. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── App animation utilities ──────────────────────
+   Allocation-bar growth etc. Timing uses motion tokens;
+   the global prefers-reduced-motion block neutralizes it. */
+@keyframes fermor-grow-x {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+.animate-grow-x {
+  transform-origin: left center;
+  animation: fermor-grow-x var(--duration-emphasis) var(--ease-emphasis) both;
+}
+
+/* ─── Hidden scrollbar ─────────────────────────────
+   Keeps scrolling functional; hides the visual track.
+   Applied to app-frame regions (main content). */
+.no-scrollbar {
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* legacy Edge */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;                /* Chromium / Safari */
+}
+
+/* ─── Wealth Engine range sliders (landing, scoped) ───
+   Filled track reads progress; thumb is a floating white
+   disc with an accent halo. Accent color comes from
+   --we-accent / --we-accent-soft set inline per input. */
+.we-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 9999px;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--we-accent) 55%, transparent) 0%,
+    var(--we-accent) var(--we-fill, 50%),
+    var(--we-track, rgba(255, 255, 255, 0.10)) var(--we-fill, 50%)
+  );
+  outline: none;
+  cursor: pointer;
+}
+.we-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 22px;
+  width: 22px;
+  border-radius: 9999px;
+  background: #ffffff;
+  border: 2px solid var(--we-accent);
+  box-shadow:
+    0 4px 14px rgba(11, 31, 58, 0.22),
+    0 0 0 5px color-mix(in srgb, var(--we-accent) 18%, transparent);
+  transition: transform 150ms ease;
+}
+.we-range::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+.we-range::-moz-range-thumb {
+  height: 22px;
+  width: 22px;
+  border-radius: 9999px;
+  background: #ffffff;
+  border: 2px solid var(--we-accent);
+  box-shadow:
+    0 4px 14px rgba(2, 8, 23, 0.45),
+    0 0 0 5px color-mix(in srgb, var(--we-accent) 18%, transparent);
+}
+.we-range:focus-visible {
+  outline: 2px solid var(--we-accent);
+  outline-offset: 4px;
+}
+
+/* ─── Card hover physics ───────────────────────────
+   Gentle lift shared by interactive dashboard cards.
+   Neutralized globally under prefers-reduced-motion. */
+.card-hover {
+  transition:
+    transform var(--duration-normal) var(--ease-normal),
+    box-shadow var(--duration-normal) var(--ease-normal);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 44px -22px rgba(11, 31, 58, 0.30);
+  }
+}
+
+/* ─── Insight ticker marquee ───────────────────────
+   Seamless left-to-right glide for the dashboard band.
+   The global prefers-reduced-motion block pauses it. */
+@keyframes veyra-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  animation: veyra-marquee 32s linear infinite;
+}
