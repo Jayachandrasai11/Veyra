@@ -51,7 +51,7 @@ export function AssistantPage() {
       >
         <AskFermorInterface
           context={{ entryPoint: "assistant" }}
-          onClose={() => navigate("/")}
+          onClose={() => navigate("/dashboard")}
           autoFocus
         />
       </div>

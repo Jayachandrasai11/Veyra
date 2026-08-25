@@ -49,7 +49,7 @@ const PAGE_CONTEXT: Array<{ prefix: string; title: string; description: string }
   { prefix: "/connect",  title: "Connect accounts", description: "Bring your accounts together" },
   { prefix: "/plans",    title: "Plans",    description: "Choose the plan that fits your journey" },
   { prefix: "/settings", title: "Settings", description: "Account and preferences" },
-  { prefix: "/",         title: "Home",     description: "Your money at a glance" },
+  { prefix: "/dashboard", title: "Home", description: "Your money at a glance" },
 ];
 
 function pageContext(pathname: string) {

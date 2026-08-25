@@ -99,7 +99,7 @@ export function PlansPage() {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
       {/* Back */}
       <Link
-        to="/"
+        to="/dashboard"
         className={cn(
           "inline-flex items-center gap-1.5 text-[length:var(--typography-label-size)] font-medium",
           "text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] mb-6",

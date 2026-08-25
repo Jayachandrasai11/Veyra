@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { Navigate, Routes, Route } from "react-router";
+import { Routes, Route } from "react-router";
 
 import { AppShell } from "@/components/layout/AppShell/AppShell";
 
@@ -41,11 +41,11 @@ export function AppRoutes() {
   return (
     <Suspense fallback={<PageSkeleton />}>
       <Routes>
+        {/* Landing page is the entry point */}
+        <Route path="/" element={<LandingPage />} />
         <Route path="/landing" element={<LandingPage />} />
-        {/* Legacy path — the dashboard lives at "/" */}
-        <Route path="/dashboard" element={<Navigate to="/" replace />} />
         <Route element={<AppShell />}>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/dashboard" element={<HomePage />} />
           <Route path="/money" element={<MoneyPage />} />
           <Route path="/activity" element={<RecentActivityPage />} />
           <Route path="/health" element={<HealthBreakdownPage />} />

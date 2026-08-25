@@ -47,7 +47,7 @@ interface NavItem {
 }
 
 const primaryNav: NavItem[] = [
-  { to: "/",          icon: House,      label: "Home" },
+  { to: "/dashboard", icon: House,  label: "Home" },
   { to: "/money",     icon: Landmark,   label: "Money" },
   { to: "/insights",  icon: ChartLine,  label: "Insights" },
   { to: "/goals",     icon: Target,     label: "Goals" },

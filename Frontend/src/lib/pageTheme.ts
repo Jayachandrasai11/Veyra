@@ -19,7 +19,7 @@ export type PageTheme =
   | "default";
 
 export function pageThemeFromPath(pathname: string): PageTheme {
-  if (pathname === "/") return "home";
+  if (pathname === "/" || pathname.startsWith("/dashboard")) return "home";
   if (pathname.startsWith("/money")) return "money";
   if (pathname.startsWith("/insights")) return "insights";
   if (pathname.startsWith("/goals")) return "goals";
